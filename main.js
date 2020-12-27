@@ -11,11 +11,13 @@ const divideBtn = document.querySelector('#divide-btn');
 const multipyBtn = document.querySelector('#multipy-btn');
 const equalsBtn = document.querySelector('#equals2-btn')
 
+
 // functions
-const test = () => {
-    console.log('testing')
+const testing = () => {
+    console.log('hello')
 }
 
+
+
 // EventListners 
-// numBtnList.addEventListener('click',retrieve);
-delBtn.addEventListener('click',test);
+delBtn.addEventListener('click', testing);
