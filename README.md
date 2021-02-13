@@ -8,4 +8,4 @@
 
 # to test it
 
-run git clone https://github.com/Xavier577/Vanilla-javascript-calculator. or download the zip file and open the index.html file
+run git clone https://github.com/Xavier577/Vanilla-javascript-calculator or download the zip file and then open the index.html file
