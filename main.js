@@ -1,23 +1,33 @@
-// Selectors
-const calcDisplay = document.querySelector('.calc-display');
-const numBtnList = document.querySelectorAll('.btn-numList');
-const numBtns = document.querySelector('.num-btn')
-// operator keys selectors
-const delBtn = document.querySelector('#delete-btn');
-const clrBtn = document.querySelector('#clear-btn');
-const addBtn = document.querySelector('#add-btn');
-const minusBtn = document.querySelector('#minus-btn');
-const divideBtn = document.querySelector('#divide-btn');
-const multipyBtn = document.querySelector('#multipy-btn');
-const equalsBtn = document.querySelector('#equals2-btn')
+// print to console , my emulation of python XD
+const print = (any) => {
+  console.log(any);
+};
 
+// selectors
+const previousOperand = document.querySelector("[data-previous-operand]");
+const currentOperand = document.querySelector("[data-current-operand]");
+const clearBtn = document.querySelector("[data-clear-all]");
+const delBtn = document.querySelector("[data-delete]");
+const numberBtn = Array.from(document.querySelectorAll("[data-number]"));
+const operatorBtn = Array.from(document.querySelectorAll("[data-operator]"));
+const equalsTwoBtn = document.querySelector("[data-answer]");
 
-// functions
-const testing = () => {
-    console.log('hello')
+// functional programming method would be updated to oop method
+function test(e) {
+  if (currentOperand.innerHTML.includes(".") && e.target.innerText === ".")
+    return;
+  else currentOperand.innerText = currentOperand.innerText + e.target.innerText;
+}
+function clearAll() {
+  previousOperand.innerText = null;
+  currentOperand.innerText = null;
+}
+function del() {
+  currentOperand.innerHTML = currentOperand.innerHTML.toString().slice(0, -1);
 }
 
-
-
-// EventListners 
-delBtn.addEventListener('click', testing);
+numberBtn.forEach((items) => {
+  items.addEventListener("click", test);
+});
+clearBtn.addEventListener("click", clearAll);
+delBtn.addEventListener("click", del);

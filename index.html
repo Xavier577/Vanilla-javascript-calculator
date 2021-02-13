@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcutator</title>
     <!-- css FILE -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Javascript File -->
     <script src="main.js" defer></script>
-</head>
-<body>
-    <div class="calc-ctner">
-        <div class="calc-display"></div>
-        <div class="input-ctner">
-            <div class="calc-numComponent">
-                <ul class="num-btn">
-                    <li class="btn-numList">9</li>
-                    <li  class="btn-numList">8</li>
-                    <li  class="btn-numList">7</li>
-                    <li  class="btn-numList">6</li>
-                    <li  class="btn-numList">5</li>
-                    <li  class="btn-numList">4</li>
-                    <li  class="btn-numList">3</li>
-                    <li  class="btn-numList">2</li>
-                    <li  class="btn-numList">1</li>
-                    <li  class="btn-numList"></li>
-                    <li  class="btn-numList">0</li>
-                    <li  class="btn-numList">.</li>
-                </ul>
-            </div>
-            <div class="calc-operators">
-                <ul class="operator-btn">
-                    <li class="btn-oList" id="delete-btn">DEL</li>
-                    <li class="btn-oList" id="clear-btn">Clear</li>
-                    <li class="btn-oList" id="add-btn">+</li>
-                    <li class="btn-oList" id="minus-btn">-</li>
-                    <li class="btn-oList" id="divide-btn">&divide;</li>
-                    <li class="btn-oList" id="multiply-btn">&times;</li>
-                    <li class="btn-oList"></li>
-                    <li class="btn-oList" id="equals2-btn">=</li> 
-                </ul>
-            </div>
-
-        </div>
-
+  </head>
+  <body>
+    <div class="calc-grid">
+      <div class="calc-display">
+        <div class="previous-operand" data-previous-operand></div>
+        <div class="operator" data-operator-display></div>
+        <div class="current-operand" data-current-operand></div>
+      </div>
+      <button class="all-clear span-two" data-clear-all>AC</button>
+      <button data-delete>DEL</button>
+      <button data-operator class="divide">&divide;</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operator>&times;</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operator>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operator>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-answer class="span-two">=</button>
     </div>
-    
-</body>
+  </body>
 </html>
