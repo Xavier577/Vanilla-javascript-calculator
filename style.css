@@ -37,6 +37,11 @@ button:hover {
   background: #ffffffb3;
   color: black;
 }
+
+.previous-operand {
+  opacity: 0.7;
+  font-size: 16px;
+}
 .current-operand {
   font-size: 40px;
 }
