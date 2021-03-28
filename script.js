@@ -65,6 +65,8 @@ class calculator {
     return result;
   }
   renderOutput() {
+    if (this.previousOperand === "" && this.operator == "") return;
+    else if (this.currentOperand === "") return;
     this.currentOperand = this.compute();
     this.previousOperand = "";
     this.operator = "";
