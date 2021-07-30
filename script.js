@@ -45,8 +45,8 @@ class calculator {
     }
   }
   compute() {
-    let initial = parseFloat(this.previousOperand);
-    let final = parseFloat(this.currentOperand);
+    let final = parseFloat(this.previousOperand);
+    let initial = parseFloat(this.currentOperand);
     let result;
     switch (this.operator) {
       case "÷":
